@@ -19,4 +19,8 @@ public abstract class Room {
     public int getNumberOfGuests(){
         return this.guestList.size();
     }
+
+    public void removeGuest(Guest guest){
+        this.guestList.remove(guest);
+    }
 }
