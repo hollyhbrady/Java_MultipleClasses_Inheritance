@@ -12,8 +12,14 @@ public class BookingTest {
         bedroom1 = new Bedroom(RoomType.DOUBLE, 1);
     }
 
-//    @Test
-//    public void bookingHasBedroom(){
-//        assertEquals(bedroom1, hotel.bookRoom());
-//    }
+    @Test
+    public void canGetTotalBill(){
+        assertEquals(250, booking1.getTotalBill());
+    }
+
+    @Test
+    public void canChangeRoomRate(){
+        bedroom1.setRoomRate(100);
+        assertEquals(100, bedroom1.getRoomRate());
+    }
 }
