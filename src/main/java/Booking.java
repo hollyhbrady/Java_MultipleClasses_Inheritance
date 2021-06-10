@@ -8,4 +8,16 @@ public class Booking {
         this.nightsBooked = nightsBooked;
     }
 
+    public int getNightsBooked(){
+        return this.nightsBooked;
+    }
+
+    public Bedroom getRoomBooked() {
+        return this.bedroom;
+    }
+
+    public int getTotalBill() {
+        return this.bedroom.getRoomRate() * this.nightsBooked;
+    }
+
 }

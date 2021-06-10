@@ -39,6 +39,8 @@ public class HotelTest {
         confRoom1 = new ConferenceRoom("Lovely Room", 20);
         confRoom2 = new ConferenceRoom("The Smoking Room", 30);
 
+        diningRoom = new DiningRoom("The Big Dining Room", 40);
+
         bedroomList = new ArrayList<>();
 
         confRoomList = new ArrayList<>();
@@ -97,5 +99,25 @@ public class HotelTest {
         hotel.removeGuestFromConferenceRoom(confRoom1, guest2);
         assertEquals(0, hotel.getNumberOfGuestsConf(confRoom1));
     }
+
+    @Test
+    public void canAddBooking(){
+        Booking returnedBooking;
+        returnedBooking = hotel.bookRoom(bedroom1, 5);
+        assertEquals(5, hotel.getNightsBooked(returnedBooking));
+        assertEquals(bedroom1, hotel.getRoomBooked(returnedBooking));
+    }
+
+    @Test
+    public void canAddDiningRoom(){
+        DiningRoom returnedDiningRoom;
+        hotel.addDiningRoom(diningRoom);
+        assertEquals(true, hotel.getDiningRooms().containsKey("The Big Dining Room"));
+        assertEquals(true, hotel.getDiningRooms().containsValue(diningRoom));
+        assertEquals(diningRoom, hotel.getDiningRooms().get("The Big Dining Room"));
+        returnedDiningRoom = hotel.getDiningRooms().get("The Big Dining Room");
+        assertEquals(40, returnedDiningRoom.getDiningCapacity());
+    }
+
 
 }

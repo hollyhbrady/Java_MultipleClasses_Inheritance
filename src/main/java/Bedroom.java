@@ -14,6 +14,14 @@ public class Bedroom extends Room {
         return this.roomType;
     }
 
+    public void setRoomRate(int rate){
+        this.nightlyRate = rate;
+    }
+
+    public int getRoomRate(){
+        return this.nightlyRate;
+    }
+
     public int getCapacityFromEnum() {
         return this.roomType.getCapacity();
     }

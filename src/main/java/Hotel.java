@@ -5,6 +5,7 @@ public class Hotel {
     private String name;
     private ArrayList<Bedroom> bedroomList;
     private ArrayList<ConferenceRoom> confRoomList;
+    private HashMap<String, DiningRoom> diningRoomList;
 
     public Hotel(String name){
         this.name = name;
@@ -18,6 +19,14 @@ public class Hotel {
 
     public void addConferenceRoom(ConferenceRoom conferenceRoom) {
         this.confRoomList.add(conferenceRoom);
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom) {
+        this.diningRoomList.put(diningRoom.getRoomName(), diningRoom);
+    }
+
+    public HashMap getDiningRooms() {
+        return this.diningRoomList;
     }
 
     public int getNumberOfBedrooms() {
