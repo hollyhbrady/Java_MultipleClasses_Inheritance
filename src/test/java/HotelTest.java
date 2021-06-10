@@ -112,13 +112,13 @@ public class HotelTest {
 
     @Test
     public void canAddDiningRoom(){
-        DiningRoom returnedDiningRoom;
+//        DiningRoom returnedDiningRoom;
         hotel.addDiningRoom(diningRoom);
         assertEquals(true, hotel.getDiningRooms().containsKey("The Big Dining Room"));
         assertEquals(true, hotel.getDiningRooms().containsValue(diningRoom));
         assertEquals(diningRoom, hotel.getDiningRooms().get("The Big Dining Room"));
-        returnedDiningRoom = hotel.getDiningRooms().get("The Big Dining Room");
-        assertEquals(40, returnedDiningRoom.getDiningCapacity());
+//        returnedDiningRoom = hotel.getDiningRooms().get("The Big Dining Room");
+//        assertEquals(40, returnedDiningRoom.getDiningCapacity());
     }
 
 
