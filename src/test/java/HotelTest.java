@@ -75,31 +75,44 @@ public class HotelTest {
         assertEquals(2, hotel.getNumberOfConferenceRooms());
     }
 
+//    @Test
+//    public void canCheckInGuestToBedroom(){
+//        hotel.checkInGuestToBedroom(bedroom1, guest1);
+//        assertEquals(1, hotel.getNumberOfGuestsBedroom(bedroom1));
+//    }
+//
+//    @Test
+//    public void canCheckInGuestToConferenceRoom(){
+//        hotel.checkInGuestToConferenceRoom(confRoom1, guest2);
+//        hotel.checkInGuestToConferenceRoom(confRoom1, guest3);
+//        assertEquals(2, hotel.getNumberOfGuestsConf(confRoom1));
+//    }
+
     @Test
     public void canCheckInGuestToBedroom(){
-        hotel.checkInGuestToBedroom(bedroom1, guest1);
-        assertEquals(1, hotel.getNumberOfGuestsBedroom(bedroom1));
+        hotel.checkInGuest(bedroom1, guest1);
+        assertEquals(1, hotel.getNumberOfGuests(bedroom1));
     }
 
     @Test
     public void canCheckInGuestToConferenceRoom(){
-        hotel.checkInGuestToConferenceRoom(confRoom1, guest2);
-        hotel.checkInGuestToConferenceRoom(confRoom1, guest3);
-        assertEquals(2, hotel.getNumberOfGuestsConf(confRoom1));
+        hotel.checkInGuest(confRoom1, guest2);
+        hotel.checkInGuest(confRoom1, guest3);
+        assertEquals(2, hotel.getNumberOfGuests(confRoom1));
     }
 
     @Test
     public void canCheckOutGuestFromBedroom(){
-        hotel.checkInGuestToBedroom(bedroom1, guest1);
-        hotel.removeGuestFromBedroom(bedroom1, guest1);
-        assertEquals(0, hotel.getNumberOfGuestsBedroom(bedroom1));
+        hotel.checkInGuest(bedroom1, guest1);
+        hotel.checkOutGuest(bedroom1, guest1);
+        assertEquals(0, hotel.getNumberOfGuests(bedroom1));
     }
 
     @Test
     public void canCheckOutGuestFromConferenceRoom(){
-        hotel.checkInGuestToConferenceRoom(confRoom1, guest2);
-        hotel.removeGuestFromConferenceRoom(confRoom1, guest2);
-        assertEquals(0, hotel.getNumberOfGuestsConf(confRoom1));
+        hotel.checkInGuest(confRoom1, guest2);
+        hotel.checkOutGuest(confRoom1, guest2);
+        assertEquals(0, hotel.getNumberOfGuests(confRoom1));
     }
 
     @Test

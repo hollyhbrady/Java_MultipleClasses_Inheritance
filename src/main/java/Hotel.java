@@ -39,28 +39,40 @@ public class Hotel {
         return this.confRoomList.size();
     }
 
-    public void checkInGuestToBedroom(Bedroom bedroom, Guest guest) {
-        bedroom.addGuest(guest);
+//    public void checkInGuestToBedroom(Bedroom bedroom, Guest guest) {
+//        bedroom.addGuest(guest);
+//    }
+//
+//    public void checkInGuestToConferenceRoom(ConferenceRoom conferenceRoom, Guest guest) {
+//        conferenceRoom.addGuest(guest);
+//    }
+
+    public void checkInGuest(Room room, Guest guest) {
+        room.addGuest(guest);
     }
 
-    public void checkInGuestToConferenceRoom(ConferenceRoom conferenceRoom, Guest guest) {
-        conferenceRoom.addGuest(guest);
+//    public void removeGuestFromBedroom(Bedroom bedroom, Guest guest) {
+//        bedroom.removeGuest(guest);
+//    }
+//
+//    public void removeGuestFromConferenceRoom(ConferenceRoom conferenceRoom, Guest guest) {
+//        conferenceRoom.removeGuest(guest);
+//    }
+
+    public void checkOutGuest(Room room, Guest guest) {
+        room.removeGuest(guest);
     }
 
-    public void removeGuestFromBedroom(Bedroom bedroom, Guest guest) {
-        bedroom.removeGuest(guest);
-    }
+//    public int getNumberOfGuestsBedroom(Bedroom bedroom) {
+//        return bedroom.getNumberOfGuests();
+//    }
+//
+//    public int getNumberOfGuestsConf(ConferenceRoom conferenceRoom) {
+//        return conferenceRoom.getNumberOfGuests();
+//    }
 
-    public void removeGuestFromConferenceRoom(ConferenceRoom conferenceRoom, Guest guest) {
-        conferenceRoom.removeGuest(guest);
-    }
-
-    public int getNumberOfGuestsBedroom(Bedroom bedroom) {
-        return bedroom.getNumberOfGuests();
-    }
-
-    public int getNumberOfGuestsConf(ConferenceRoom conferenceRoom) {
-        return conferenceRoom.getNumberOfGuests();
+    public int getNumberOfGuests(Room room) {
+        return room.getNumberOfGuests();
     }
 
     public Booking bookRoom(Bedroom bedroom, int numberOfNights) {
