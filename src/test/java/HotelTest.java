@@ -19,6 +19,8 @@ public class HotelTest {
     ConferenceRoom confRoom1;
     ConferenceRoom confRoom2;
 
+    DiningRoom diningRoom;
+
     private ArrayList<Bedroom> bedroomList;
     private ArrayList<ConferenceRoom> confRoomList;
 
