@@ -7,6 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class HotelTest {
 
+    Guest guest1;
+    Guest guest2;
+    Guest guest3;
+    Guest guest4;
+
     Bedroom bedroom1;
     Bedroom bedroom2;
     Bedroom bedroom3;
