@@ -51,4 +51,18 @@ public class Hotel {
     public int getNumberOfGuestsConf(ConferenceRoom conferenceRoom) {
         return conferenceRoom.getNumberOfGuests();
     }
+
+    public Booking bookRoom(Bedroom bedroom, int numberOfNights) {
+        Booking booking;
+        booking = new Booking(bedroom, numberOfNights);
+        return booking;
+    }
+
+    public int getNightsBooked(Booking booking) {
+        return booking.getNightsBooked();
+    }
+
+    public Bedroom getRoomBooked(Booking booking) {
+        return booking.getRoomBooked();
+    }
 }
